@@ -1,0 +1,92 @@
+/* styles.css */
+:root {
+    --bg: #0f172a;        /* slate-900 */
+    --card: #111827;      /* gray-900 */
+    --text: #e5e7eb;      /* gray-200 */
+    --muted: #9ca3af;     /* gray-400 */
+    --accent: #93c5fd;    /* blue-300 */
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: var(--text);
+    background: radial-gradient(1200px 800px at 70% -10%, #1f2937 0%, var(--bg) 60%, #0b1022 100%);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    align-items: start;
+}
+
+.site-header,
+.site-footer {
+    padding: 1rem clamp(1rem, 3vw, 2rem);
+}
+
+.site-title {
+    margin: 0.5rem 0 0;
+    font-size: clamp(1.5rem, 2.4vw + 1rem, 3rem);
+    letter-spacing: 0.03em;
+    color: var(--accent);
+    text-shadow: 0 2px 12px rgba(147, 197, 253, 0.25);
+}
+
+.content {
+    display: grid;
+    place-items: center;
+    padding: clamp(1rem, 3vw, 2rem);
+    gap: 1rem;
+}
+
+.hero {
+    margin: 0;
+    padding: clamp(0.5rem, 1vw, 1rem);
+    background: linear-gradient(180deg, rgba(147,197,253,0.1), rgba(147,197,253,0.03));
+    border: 1px solid rgba(147,197,253,0.25);
+    border-radius: 16px;
+    box-shadow:
+            0 8px 30px rgba(0,0,0,0.35),
+            inset 0 0 0 1px rgba(255,255,255,0.03);
+    max-width: min(480px, 92vw);
+}
+
+.hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    filter: contrast(1.05) saturate(1.05);
+}
+
+.tagline {
+    margin: 0.25rem 0 0.75rem;
+    font-size: clamp(1.1rem, 1.2vw + 1rem, 1.75rem);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: var(--text);
+}
+
+.site-footer {
+    color: var(--muted);
+    text-align: center;
+}
+
+.site-footer a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px dashed rgba(147,197,253,0.5);
+}
+
+.site-footer a:hover {
+    border-bottom-style: solid;
+}
