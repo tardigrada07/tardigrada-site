@@ -56,15 +56,19 @@ body {
     box-shadow:
             0 8px 30px rgba(0,0,0,0.35),
             inset 0 0 0 1px rgba(255,255,255,0.03);
-    max-width: min(480px, 92vw);
+    max-width: 96vw;
 }
 
-.hero-image {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    filter: contrast(1.05) saturate(1.05);
+.hero-art {
+    margin: 0;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    font-size: 0.95vw;
+    line-height: 1.05;
+    letter-spacing: 0;
+    white-space: pre;
+    overflow-x: auto;
+    color: var(--accent);
+    text-shadow: 0 0 8px rgba(147, 197, 253, 0.35);
 }
 
 .tagline {
